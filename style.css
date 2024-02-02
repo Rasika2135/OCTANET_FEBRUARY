@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    color: beige;
+}
+
+body {
+    min-height: 100vh;
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Times New Roman", Times, serif;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav ul li {
+    height: 3.125rem;
+    position: sticky;
+    z-index: 1000;
+}
+
+nav a {
+    position: sticky;
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    color: #050505;
+    font-size: 18px;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+nav a:hover {
+    color: #52035a;
+}
+
+nav li:first-child {
+    position: sticky;
+    margin-right: auto;
+}
+
+.menu-button {
+    display: none;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.About,
+.Portfolio {
+    background: black;
+}
+
+@media (max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+}
+
+@media (max-width: 1090px) {
+    .menu-button {
+        display: block;
+    }
+    .sidebar {
+        position: absolute;
+        top: 100;
+        right: 20;
+        height: 50vh;
+        width: 270px;
+        z-index: 1100;
+        background-color: rgb(115, 0, 128);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all 0.50s ease;
+    }
+    .sidebar ul li {
+        width: 50%;
+        right: 10%;
+    }
+    .sidebar a {
+        width: 50%;
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        transition: all 0.50s ease;
+    }
+    .sidebar a:hover {
+        color: var(--text-color);
+    }
+}
+
+nav.sticky ul li a {
+    color: #000;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px; 
+    font-weight: bold;
+    color: #52035a;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Hover effect for h2 tags */
+h2:hover {
+    color: #ffcc00; /* Change color on hover */
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Define a fade-in-up animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.Home {
+    background-image: url("https://i.pinimg.com/564x/67/2d/f6/672df6a2862a5081474cd71214f01a2a.jpg");
+    background-size: cover;
+    background-position: center;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.Home img {
+    margin-bottom: 0;
+}
+
+.Home p {
+    color: #52035a;
+    max-width: 600px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.About {
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    font-size: 25px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.About h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #52035a;
+}
+
+.About p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: center;
+    color: black;
+}
+
+.painting {
+    background-color: white;
+    color: #fff;
+}
+.painting h2{
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #52035a;
+}
+.painting-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.painting-item {
+    width: 30%;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.painting-item:hover {
+    transform: scale(1.05);
+}
+
+.painting-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.painting-item p {
+    padding: 10px;
+    text-align: center;
+    color: #000;
+}
+
+.painting-item button {
+    width: 100%;
+    padding: 10px;
+    background-color: goldenrod;
+    color: black;
+    border: none;
+    border-top: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.painting-item button:hover {
+    background-color: blue;
+}
+
+.Contact {
+    background-color: #fff;
+    color: #fff;
+    padding: 5rem 9% 2rem;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* General styles for sections */
+section {
+    padding: 4rem 9%;
+}
+
+/* Style the form elements in the Contact section */
+/* Add these styles to your existing style.css file */
+
+/* Style the form container */
+#order-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px; /* Adjust the maximum width of the form */
+    margin: 0 auto;
+}
+
+/* Style form labels */
+#order-form label {
+    margin-bottom: 0.5rem;
+    color: #fff; /* Label text color */
+}
+
+/* Style form inputs */
+#order-form select,
+#order-form input,
+#order-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #fff; /* Input border color */
+    background-color: #070707; /* Input background color */
+    color: #fff; /* Input text color */
+}
+
+/* Style form textarea */
+#order-form textarea {
+    resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+/* Style the form submit button */
+#order-form button {
+    background-color: #ffcc00; /* Button background color */
+    color: #222; /* Button text color */
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: none;
+}
+
+/* Hover effect for the form submit button */
+#order-form button:hover {
+    background-color: rgb(64, 188, 64); /* Hover background color */
+    color: #222; /* Hover text color */
+}
+
+
+/* Footer styling */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 600px) {
+    section {
+        padding: 2rem 5%;
+    }
+}
